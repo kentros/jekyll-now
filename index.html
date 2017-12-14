@@ -14,32 +14,6 @@ newsletter_background_image: images/kcnight.jpg
 	<div class="learn-more"><a href="#learn-more">Meet Keri<span class="arrow">&#x25BC;</span></a></div>
 </header>
 
-<!-- <section id="learn-more">
-	<div class="container">
-		<h2 class="editable">Why Sheep need the vote</h2>
-
-		<ul class="thirds">
-			<li>
-				<div class="image"><img class="editable" alt="population" src="{{ site.baseurl }}/images/people.svg" /></div>
-				<h3 class="editable">Population</h3>
-				<p class="editable">New Zealand has a human population of just 4.5M while there are 70M sheep. </p>
-			</li>
-
-			<li>
-				<div class="image"><img class="editable" alt="trends" src="{{ site.baseurl }}/images/trend.svg" /></div>
-				<h3 class="editable">Economy</h3>
-				<p class="editable">Sheep are the backbone of the economy yet they receive no compensation.</p>
-			</li>
-
-			<li>
-				<div class="image"><img class="editable" alt="conditions" src="{{ site.baseurl }}/images/heart.svg" /></div>
-				<h3 class="editable">Work Conditions</h3>
-				<p class="editable">Sheep are forced to eat grass every day of their life. How about some of variety?</p>
-			</li>
-		</ul>
-	</div>
-</section> -->
-
 <section id="learn-more">
      <div class="container mission">
 		<h2 class="editable">Meet Keri</h2>
@@ -57,60 +31,15 @@ I believe there are solutions to the issues that each of us face, and it's time 
 	</div>
 </section>
 
-<!--
-<section>
-	<div class="container">
-		<blockquote>
-			<p class="quote editable">The ultimate measure of a sheep is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.</p>
-			<div class="attribute">
-				<p class="meta">
-					<span class="author editable"><strong>Wooly McBaa</strong><br />Founder</span>
-					<span class="image"><img class="editable" src="{{ site.baseurl }}/images/wooly.jpg" alt="Wooly"></span>
-				</p>
-			</div>
-		</blockquote>
-	</div>
-</section> -->
-
 <section class="newsletter" style="background-image: url({% include relative-src.html src=page.newsletter_background_image %});">
 	<div class="container">
 		<h2 class="editable">Join us</h2>
 		<p class="editable">Sign up to hear the latest news and progress in our fight for your rights.</p>
-		<form action="{{ site.newsletter_action }}" method="post">
-			<input type="text" name="EMAIL" placeholder="Email">
-			<input type="submit" value="Sign up"/>
-		</form>
+                <form method="POST" action="http://formspree.io/admin@keriformissouri.com">
+                    <input type="text" name="emailorphone" placeholder="Your email or phone number">
+                    <input type="hidden" name="_subject" value="Subscribe to keriformissouri.com" />
+                    <input type="submit" value="Sign up"/>
+                </form>
 	</div>
 </section>
 
-<!--
-<section id="donate">
-	<div class="container">
-		<h2 class="editable">Make a donation</h2>
-		<div class="donate">
-			{{ site.donation_embed }}
-		</div>
-	</div>
-</section> 
-
-
-
-<section>
-	<div class="container">
-		<h2 class="editable">Updates</h2>
-		<p class="editor-link"><a href="cloudcannon:collections/_posts" class="btn"><strong>&#9998;</strong> Add Update</a></p>
-		{% for post in site.posts %}
-			{% assign author_id = post.author_staff_member | prepend: "/staff_members/" | append: "/" %}
-			{% assign author = site.staff_members | where: "url", author_id | first %}
-			<div class="post">
-				<div class="post-title">
-					<img src="{% include relative-src.html src=author.image %}" alt="Photo of {{ author.name }}" width="50" height="50" />
-					<h3>{{ post.title }}</h3>
-					<p class="date">{{ post.date | date: '%B %d, %Y' }}</p>
-				</div>
-				{{ post.content }}
-				<p class="editor-link"><a href="cloudcannon:collections/{{ post.path }}" class="btn"><strong>&#9998;</strong> Edit Update</a></p>
-			</div>
-		{% endfor %}
-	</div>
-</section> -->
